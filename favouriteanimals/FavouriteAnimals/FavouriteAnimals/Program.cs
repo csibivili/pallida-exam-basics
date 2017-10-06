@@ -11,8 +11,14 @@ namespace FavouriteAnimals
     {
         public static void Main(string[] args)
         {
-            TextOperations.PrintLines();
-            Console.ReadLine();
+            if (args.Length != 0)
+            {
+                TextOperations.AddNewAnimal(args);
+            }
+            else
+            {
+                TextOperations.PrintLines();
+            }
         }    
     }
 }
