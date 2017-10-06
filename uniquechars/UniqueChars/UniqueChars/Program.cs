@@ -17,6 +17,7 @@ namespace UniqueChars
 
         public static List<char> UniqueCharacters(string input)
         {
+            input = input.ToLower();
             char[] CharArray = input.ToCharArray();
             var UniqChars = new List<char>();
             for (int i = 0; i < CharArray.Length; i++)
