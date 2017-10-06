@@ -8,6 +8,9 @@ namespace CandyShopApp
 {
     public class CandyShop
     {
+        public static Candy CANDY = new Candy();
+        public static Lollipop LOLLIPOP = new Lollipop();
+
         public int Money, Sugar;
         public List<Sweets> Sweets;
 
@@ -28,7 +31,7 @@ namespace CandyShopApp
 
         public void Sell(Sweets sweet, int pieces)
         {
-            if (sweet == new Candy())
+            if (sweet == CANDY)
             {
                 if (InventoryCheck()["candies"] >= pieces)
                 {
@@ -59,7 +62,7 @@ namespace CandyShopApp
             int numberOfCandies = 0, numberOfLollipops = 0;
             for (int i = 0; i < Sweets.Count; i++)
             {
-                if (Sweets[i] == new Candy())
+                if (Sweets[i] == CANDY)
                 {
                     numberOfCandies++;
                 }
