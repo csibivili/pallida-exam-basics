@@ -19,7 +19,13 @@ namespace UniqueChars
         {
             char[] CharArray = input.ToCharArray();
             var UniqChars = new List<char>();
-            UniqChars.Add(CharArray[0]);
+            for (int i = 0; i < CharArray.Length; i++)
+            {
+                if (!UniqChars.Contains(CharArray[i]))
+                {
+                    UniqChars.Add(CharArray[i]);
+                }                
+            } 
             return UniqChars;
         }
     }
