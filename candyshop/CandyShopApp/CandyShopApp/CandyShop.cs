@@ -83,7 +83,7 @@ namespace CandyShopApp
 
         public void BuySugar(int sugar)
         {
-
+            Sugar += sugar;
         }
     }
 }
