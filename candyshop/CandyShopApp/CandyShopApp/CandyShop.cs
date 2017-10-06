@@ -28,29 +28,35 @@ namespace CandyShopApp
 
         public void Sell(Sweets sweet, int pieces)
         {
-            int howMany = 0;
-            for (int i = 0; i < Sweets.Count; i++)
+            if (sweet == new Candy())
             {
-                if (Sweets[i] == sweet)
+                if (InventoryCheck()["candies"] >= pieces)
                 {
-                    howMany++;
+                    Selling(sweet, pieces);
                 }
             }
-            if (howMany >= pieces)
+            else
             {
-                for (int i = 0; i < pieces; i++)
+                if (InventoryCheck()["lollipops"] >= pieces)
                 {
-                    Sweets.Remove(sweet);
-                    Money += sweet.Price;
-                }               
+                    Selling(sweet, pieces);
+                }
+            }
+        }
+
+        public void Selling(Sweets sweet, int pieces)
+        {
+            for (int i = 0; i < pieces; i++)
+            {
+                Sweets.Remove(sweet);
+                Money += sweet.Price;
             }
         }
 
         public Dictionary<string, int> InventoryCheck()
         {
             Dictionary<string, int> inventory = new Dictionary<string, int>();
-            int numberOfCandies = 0;
-            int numberOfLollipops = 0;
+            int numberOfCandies = 0, numberOfLollipops = 0;
             for (int i = 0; i < Sweets.Count; i++)
             {
                 if (Sweets[i] == new Candy())
