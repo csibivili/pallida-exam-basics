@@ -10,7 +10,7 @@ namespace CandyShopApp
     {
         public static Candy CANDY = new Candy();
         public static Lollipop LOLLIPOP = new Lollipop();
-        public static List<Sweets> Sweets; 
+        public List<Sweets> Sweets; 
 
         public double Money, Sugar;
 
