@@ -8,5 +8,10 @@ namespace CandyShopApp
 {
     public class Lollipop : Sweets
     {
+        public Lollipop()
+        {
+            Sugar = 5;
+            Price = 10;
+        }
     }
 }
