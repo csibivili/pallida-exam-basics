@@ -1,2 +1,2 @@
-# csibivili-RPG
+# csibivili-pallida-exam-basics
 alpaga
