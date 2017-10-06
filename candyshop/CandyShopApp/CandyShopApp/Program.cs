@@ -11,25 +11,26 @@ namespace CandyShopApp
         public static void Main(string[] args)
         {
             CandyShop candyShop = new CandyShop(300);
+            candyShop.CreateSweets(CandyShop.CANDY);
+            candyShop.CreateSweets(CandyShop.CANDY);
+            candyShop.CreateSweets(CandyShop.LOLLIPOP);
+            candyShop.CreateSweets(CandyShop.LOLLIPOP);
             candyShop.PrintInfo();
-            for (int i = 0; i < 15; i++)
-            {
-                candyShop.CreateSweets(CandyShop.CANDY);
-            }           
+            // Should print out:
+            // Invetory: 2 candies, 2 lollipops, Income: 0$, Sugar: 270gr
+            candyShop.Sell(CandyShop.CANDY, 1);
             candyShop.PrintInfo();
-            for (int i = 0; i < 15; i++)
-            {
-                candyShop.CreateSweets(CandyShop.LOLLIPOP);
-            }
+            // Should print out:
+            // "Invetory: 1 candies, 2 lollipops, Income: 20$, Sugar: 270gr"
+            candyShop.Raise(50);
+            candyShop.Sell(CandyShop.LOLLIPOP, 1);
             candyShop.PrintInfo();
-            candyShop.Sell(CandyShop.CANDY,5);
+            // Should print out:
+            // "Invetory: 1 candies, 1 lollipops, Income: 35$, Sugar: 270gr"
+            candyShop.BuySugar(300);
             candyShop.PrintInfo();
-            candyShop.Sell(CandyShop.CANDY, 20);
-            candyShop.PrintInfo();
-            candyShop.Sell(CandyShop.LOLLIPOP, 10);
-            candyShop.PrintInfo();
-            candyShop.BuySugar(600);
-            candyShop.PrintInfo();
+            // Should print out:
+            // "Invetory: 1 candies, 1 lollipops, Income: 5$, Sugar: 570gr"
             Console.ReadLine();
         }
     }

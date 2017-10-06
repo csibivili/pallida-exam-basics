@@ -10,9 +10,9 @@ namespace CandyShopApp
     {
         public static Candy CANDY = new Candy();
         public static Lollipop LOLLIPOP = new Lollipop();
+        public static List<Sweets> Sweets; 
 
-        public int Money, Sugar;
-        public List<Sweets> Sweets;
+        public double Money, Sugar;
 
         public CandyShop(int sugar)
         {
@@ -44,6 +44,14 @@ namespace CandyShopApp
                 {
                     Selling(sweet, pieces);
                 }
+            }
+        }
+
+        public void Raise(double percentage)
+        {
+            foreach (var sweet in Sweets)
+            {
+                sweet.Price *= (percentage / 100.00);
             }
         }
 
@@ -86,7 +94,11 @@ namespace CandyShopApp
 
         public void BuySugar(int sugar)
         {
-            Sugar += sugar;
+            if (Money >= sugar /10)
+            {
+                Sugar += sugar;
+                Money -= sugar / 10;
+            }
         }
     }
 }
