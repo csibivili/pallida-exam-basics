@@ -13,5 +13,11 @@ namespace CandyShopApp
             Sugar = 10;
             Price = 20;
         }
+
+        public Candy(double percentage)
+        {
+            Sugar = 10;
+            Price = (percentage / 100 + 1) * 20;
+        }
     }
 }

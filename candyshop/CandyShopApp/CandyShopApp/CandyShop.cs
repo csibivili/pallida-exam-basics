@@ -10,8 +10,8 @@ namespace CandyShopApp
     {
         public static Candy CANDY = new Candy();
         public static Lollipop LOLLIPOP = new Lollipop();
-        public List<Sweets> Sweets; 
 
+        public List<Sweets> Sweets; 
         public double Money, Sugar;
 
         public CandyShop(int sugar)
@@ -49,9 +49,20 @@ namespace CandyShopApp
 
         public void Raise(double percentage)
         {
-            foreach (var sweet in Sweets)
+            int i = 0;
+            while (i < Sweets.Count)
             {
-                sweet.Price *= (percentage / 100.00);
+                if (Sweets[i] == CANDY)
+                {
+                    Sweets.Remove(Sweets[i]);
+                    Sweets.Insert(Sweets.Count - 1,new Candy(percentage));
+                }
+                else
+                {
+                    Sweets.Remove(Sweets[i]);
+                    Sweets.Insert(Sweets.Count - 1, new Lollipop(percentage));
+                }
+                i++;
             }
         }
 
