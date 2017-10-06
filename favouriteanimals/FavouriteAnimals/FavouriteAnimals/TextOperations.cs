@@ -38,9 +38,12 @@ namespace FavouriteAnimals
         {
             foreach (var arg in args)
             {
-                using (StreamWriter file = new StreamWriter(Path, true))
+                if (!ReadText().Contains(arg))
                 {
-                    file.WriteLine(arg);
+                    using (StreamWriter file = new StreamWriter(Path, true))
+                    {
+                        file.WriteLine(arg);
+                    }
                 }
             }
         }
