@@ -20,5 +20,14 @@ namespace UniqeCharsTest
 
             Assert.AreEqual(output, UniqueChars.UniqueChars.UniqueCharacters(input));
         }
+
+        [Test]
+        public void TestUniqueCharactersWhenSameLetterMultipleTimes()
+        {
+            string input = "bbbbb";
+            var output = new List<char> { 'b' };
+
+            Assert.AreEqual(output, UniqueChars.UniqueChars.UniqueCharacters(input));
+        }
     }
 }
