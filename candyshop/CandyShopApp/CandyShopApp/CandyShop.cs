@@ -46,9 +46,33 @@ namespace CandyShopApp
             }
         }
 
+        public Dictionary<string, int> InventoryCheck()
+        {
+            Dictionary<string, int> inventory = new Dictionary<string, int>();
+            int numberOfCandies = 0;
+            int numberOfLollipops = 0;
+            for (int i = 0; i < Sweets.Count; i++)
+            {
+                if (Sweets[i] == new Candy())
+                {
+                    numberOfCandies++;
+                }
+                else
+                {
+                    numberOfLollipops++;
+                }
+            }
+            inventory.Add("candies", numberOfCandies);
+            inventory.Add("lollipops", numberOfLollipops);
+            return inventory;
+        }
+
         public void PrintInfo()
         {
-
+            Console.WriteLine(
+                "Inventory: {0} candies, {1} lollipops, " +
+                "Income: {2}$, Sugar: {3}gr", 
+                InventoryCheck()["candies"], InventoryCheck()["lollipops"], Money, Sugar);
         }
 
         public void BuySugar(int sugar)
