@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A319462-430C-44DB-97DA-144D07B20650}</ProjectGuid>
+    <ProjectGuid>{10214411-C5E0-4B93-98CB-2853678BC219}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CandyShop</RootNamespace>
-    <AssemblyName>CandyShop</AssemblyName>
+    <RootNamespace>UniqueChars</RootNamespace>
+    <AssemblyName>UniqueChars</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
