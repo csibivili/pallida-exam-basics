@@ -13,6 +13,12 @@ namespace UniqueChars
             // Print the characters from that list in the following format:
             // "n", "g", "r", "m"
 
+            string input = Console.ReadLine();
+            foreach (var chars in UniqueCharacters(input))
+            {
+                Console.Write("\"{0}\", ", chars);
+            }
+            Console.ReadLine();
         }
 
         public static List<char> UniqueCharacters(string input)
