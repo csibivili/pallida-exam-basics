@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyShopApp", "CandyShopApp\CandyShopApp.csproj", "{CA69A213-A42C-43E1-8986-76AF3AFA1A69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA69A213-A42C-43E1-8986-76AF3AFA1A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA69A213-A42C-43E1-8986-76AF3AFA1A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA69A213-A42C-43E1-8986-76AF3AFA1A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA69A213-A42C-43E1-8986-76AF3AFA1A69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B3A38AA-6B79-4340-82F9-B5672AA6B844}
+	EndGlobalSection
+EndGlobal
